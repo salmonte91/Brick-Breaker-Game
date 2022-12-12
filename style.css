@@ -1,34 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik+Vinyl);
 
 body{
-    background-color: #004852;
+    background-color: #d0f0f5;
+}
+
+#main-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #title{
     font-family: 'Rubik Vinyl';
     font-size: 48px;
-    text-align: center;
+    margin-top: 100px;
+    color: #f93c3c;
 }
 
-.startBtn {
-    display: inline-block;
+#startBtn {
     font-family: 'Rubik Vinyl';
     padding: 5px 48px;
-    font-size: 32px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #000;
-    background-color: #C7C2FF;
+    color: #f93c3c;
+    background-color: #cfccf9;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    margin-top: 300px;
   }
   
-  .startBtn:hover {background-color: #736B92}
+  #startBtn:hover {background-color: #c2b6ed}
   
-  .startBtn:active {
+  #startBtn:active {
     background-color: #C7C2FF;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
