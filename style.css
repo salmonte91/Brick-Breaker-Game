@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik+Vinyl);
 
 body{
+    display: flex;
+    justify-content: center;
     background-color: #d0f0f5;
 }
 
 #main-menu{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -52,4 +55,10 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
+    width: 60%;
+    height: auto;
+    border-style: solid;
+    border-color: #000 ;
+    padding: 0.5% 0.5%;
+    border-radius: 1%;
   }
