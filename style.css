@@ -2,6 +2,8 @@
 
 body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: #d0f0f5;
 }
@@ -46,15 +48,18 @@ body{
 
   img{
     display: flex;
+    position: relative;
     width: 5%;
+    height: 5%;
     padding: 2px 2px;
   }
 
   .grid{
     display: flex;
+    position: sticky;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 60%;
     height: auto;
     border-style: solid;
