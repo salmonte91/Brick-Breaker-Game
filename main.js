@@ -18,6 +18,7 @@ function startGame(){
         }
     }
     createPaddle(0)
+    createBall(-65)
 }
 
 startBtn.addEventListener('click', startGame)
@@ -31,7 +32,7 @@ function createBlocks(url){
 }
 
 function createPaddle(xAxis) {
-    var paddle = document.createElement('img')
+    let paddle = document.createElement('img')
     paddle.src = './assets/Paddle-images/Paddle-Animate1.png'
     paddle.style.marginTop = '650px'
     paddle.style.width = '100px'
@@ -54,7 +55,7 @@ function createPaddle(xAxis) {
                 direction = null
             }
         }
-          xAxis =  movePaddle(direction,xAxis,paddle)
+          xAxis =  movePaddleBall(direction,xAxis,paddle)
 
     })
     document.addEventListener('keyup', ()=> {
@@ -63,7 +64,7 @@ function createPaddle(xAxis) {
 
 }
 
-function movePaddle(direction, x, paddle){
+function movePaddleBall(direction, x, object){
 
         if(direction === 'left'){
             x-=20
@@ -72,7 +73,39 @@ function movePaddle(direction, x, paddle){
             x+=20
         }
         
-        paddle.style.left = x + 'px'
+        object.style.left = x + 'px'
 
         return x;
 }
+
+function createBall(xAxis){
+    let ball = document.createElement('img')
+    ball.src = './assets/Paddle-images/Paddle-Ball.png'
+    ball.style.marginTop = '630px'
+    ball.style.left = xAxis + 'px'
+    ball.style.width = '25px'
+    ball.style.height = '25px'
+    grid.appendChild(ball)
+
+    document.addEventListener('keydown', function(move){
+        if(move.key === 'ArrowLeft'){
+        direction = 'left'
+           if(xAxis === -720){
+                direction = null
+            }
+        }
+        else if(move.key === 'ArrowRight'){
+        direction = 'right'
+            if(xAxis === 720){
+                direction = null
+            }
+        }
+          xAxis =  movePaddleBall(direction,xAxis,ball)
+
+    })
+    document.addEventListener('keyup', ()=> {
+        direction = null
+    })
+
+}
+
